@@ -16,6 +16,6 @@ public class Tests {
     void TestSorting() {
         Assertions.assertTrue(program.isWellSorted(new String[]{"A", "B", "C", "D"}));
 
-        Assertions.assertFalse(program.isWellSorted(new String[]{"B", "A", "C", "D"}));
+        Assertions.assertFalse(program.isWellSorted(new String[]{ "D" , "C", "B", "A" }));
     }
 }
