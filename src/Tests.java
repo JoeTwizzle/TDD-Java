@@ -13,9 +13,17 @@ public class Tests {
     }
 
     @Test
-    void TestSorting() {
+    void TestRandom() {
+        Assertions.assertFalse(program.isWellSorted(new String[]{"Aadaadad"}));
+    }
+    @Test
+    void TestCorrectOrder(){
         Assertions.assertTrue(program.isWellSorted(new String[]{"A", "B", "C", "D"}));
         Assertions.assertTrue(program.isWellSorted(new String[]{"B", "A", "C", "D"}));
+    }
+    @Test
+    void TestIncorrectOrder(){
+        Assertions.assertFalse(program.isWellSorted(new String[]{"C", "B", "A",  "D"}));
         Assertions.assertFalse(program.isWellSorted(new String[]{"D", "C", "B", "A"}));
     }
 }
