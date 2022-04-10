@@ -4,5 +4,5 @@ public interface ITaskSorter {
     void setOrder(String[][] order);
 
     String[][] getOrder();
-    
+
 }

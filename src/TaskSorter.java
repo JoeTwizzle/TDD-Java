@@ -1,6 +1,6 @@
 public class TaskSorter implements ITaskSorter {
 
-    String[][] order = new String[][]{};
+    String[][] order;
 
     public void setOrder(String[][] order) {
 
@@ -19,6 +19,14 @@ public class TaskSorter implements ITaskSorter {
         if (order == null) {
 
             return false;
+        }
+
+        String[][] order = new String[this.order.length][];
+        for (int i = 0; i < order.length; i++) {
+            order[i] = new String[this.order[i].length];
+            for (int j = 0; j < order[i].length; j++) {
+                order[i][j] = this.order[i][j];
+            }
         }
 
         for (String s : sequence) {
