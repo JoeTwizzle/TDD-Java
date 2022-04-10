@@ -10,6 +10,7 @@ public class Tests {
     @BeforeAll
     void InitTests() {
         taskSorter = new TaskSorter();
+        taskSorter.setOrder(new String[][]{{ "A" , "C" }, { "C", "D" }, { "B", "C" }});
     }
 
     @Test
