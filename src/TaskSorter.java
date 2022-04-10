@@ -1,8 +1,20 @@
-public class TaskSorter {
+public class TaskSorter implements ITaskSorter {
+
+    String[][] order = new String[][]{};
+
+    public void setOrder(String[][] order) {
+
+        this.order = order;
+    }
+
+    public String[][] getOrder(String[][] order) {
+
+        return order;
+    }
 
     public boolean isWellSorted(String[] sequence) {
 
-        String[][] order = new String[][]{{"A", "C"}, {"C", "D"}, {"B", "C"}};
+        setOrder({"A", "C"}, {"C", "D"}, {"B", "C"});
         int noAppearance;
 
         for (String s : sequence) {
