@@ -3,7 +3,6 @@ public interface ITaskSorter {
 
     void setOrder(String[][] order);
 
-    void getOrder(String[][] order);
-
-
+    String[][] getOrder();
+    
 }

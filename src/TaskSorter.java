@@ -7,8 +7,9 @@ public class TaskSorter implements ITaskSorter {
         this.order = order;
     }
 
-    public void getOrder(String[][] order) {
+    public String[][] getOrder() {
 
+        return order;
     }
 
     public boolean isWellSorted(String[] sequence) {
