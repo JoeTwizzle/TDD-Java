@@ -15,28 +15,21 @@ public class Program {
         boolean legit = true;
         int noAppearance;
 
-        for (int i = 0; i < sequence.length; i++) {
+        for (String s : sequence) {
 
-            if (legit == false) {
-                return false;
-            }
+            boolean isContained = false;
 
-            for (int j = 0; j < order.length; j++) {
+            for (int i = 0; i < order.length; i++) {
 
-                if (sequence[i].equals(order[j][0]) || sequence[i].equals(order[j][1])) {
+                for (int j = 0; j < order[i].length; j++) {
 
-                    legit = true;
-                    break;
-                } else {
-
-                    legit = false;
-
+                    isContained |= order[i][j].equals(s);
                 }
             }
-
-        }
-        if (legit == false) {
-            return false;
+            if (!isContained) {
+                
+                return false;
+            }
         }
 
 
