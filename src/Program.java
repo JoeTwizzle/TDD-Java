@@ -1,12 +1,7 @@
 
-
 public class Program {
     public static void main(String[] args) {
 
-
-        boolean a = isWellSorted(new String[]{"A", "B", "C"});
-
-        System.out.println(a);
     }
 
     public static boolean isWellSorted(String[] sequence) {
@@ -27,7 +22,7 @@ public class Program {
                 }
             }
             if (!isContained) {
-                
+
                 return false;
             }
         }
