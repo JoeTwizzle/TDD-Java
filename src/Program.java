@@ -7,7 +7,6 @@ public class Program {
     public static boolean isWellSorted(String[] sequence) {
 
         String[][] order = new String[][]{{"A", "C"}, {"C", "D"}, {"B", "C"}};
-        boolean legit = true;
         int noAppearance;
 
         for (String s : sequence) {
