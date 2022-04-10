@@ -1,9 +1,9 @@
 public interface ITaskSorter {
     boolean isWellSorted(String[] sequence);
 
-    public void setOrder(String[][] order);
+    void setOrder(String[][] order);
 
-    public  String[][] getOrder(String[][] order);
+    void getOrder(String[][] order);
 
 
 }

@@ -7,15 +7,18 @@ public class TaskSorter implements ITaskSorter {
         this.order = order;
     }
 
-    public String[][] getOrder(String[][] order) {
+    public void getOrder(String[][] order) {
 
-        return order;
     }
 
     public boolean isWellSorted(String[] sequence) {
 
-        setOrder({"A", "C"}, {"C", "D"}, {"B", "C"});
         int noAppearance;
+
+        if (order == null) {
+
+            return false;
+        }
 
         for (String s : sequence) {
 
