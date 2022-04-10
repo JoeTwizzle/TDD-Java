@@ -5,25 +5,27 @@ import org.junit.jupiter.api.TestInstance;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Tests {
-    private Program program;
+    private TaskSorter taskSorter;
 
     @BeforeAll
     void InitTests() {
-        program = new Program();
+        taskSorter = new TaskSorter();
     }
 
     @Test
     void TestRandom() {
-        Assertions.assertFalse(program.isWellSorted(new String[]{"Aadaadad"}));
+        Assertions.assertFalse(taskSorter.isWellSorted(new String[]{"Aadaadad"}));
+        Assertions.assertFalse(taskSorter.isWellSorted(new String[]{"Aadaadad","B","A","C","D"}));
+        Assertions.assertFalse(taskSorter.isWellSorted(new String[]{"B","A","C","DDDDDD","D"}));
     }
     @Test
     void TestCorrectOrder(){
-        Assertions.assertTrue(program.isWellSorted(new String[]{"A", "B", "C", "D"}));
-        Assertions.assertTrue(program.isWellSorted(new String[]{"B", "A", "C", "D"}));
+        Assertions.assertTrue(taskSorter.isWellSorted(new String[]{"A", "B", "C", "D"}));
+        Assertions.assertTrue(taskSorter.isWellSorted(new String[]{"B", "A", "C", "D"}));
     }
     @Test
     void TestIncorrectOrder(){
-        Assertions.assertFalse(program.isWellSorted(new String[]{"C", "B", "A",  "D"}));
-        Assertions.assertFalse(program.isWellSorted(new String[]{"D", "C", "B", "A"}));
+        Assertions.assertFalse(taskSorter.isWellSorted(new String[]{"C", "B", "A",  "D"}));
+        Assertions.assertFalse(taskSorter.isWellSorted(new String[]{"D", "C", "B", "A"}));
     }
 }
