@@ -11,8 +11,8 @@ public class Program {
 
     public static boolean isWellSorted( String[] sequence ) {
 
-        String order[][] = new String[][]{{ "A", "C" }, { "C", "D" }, { "B", "C" }};
-        String temp[][] = order;
+        String[][] order = new String[][]{{ "A", "C" }, { "C", "D" }, { "B", "C" }};
+        String[][] temp = order;
         boolean legit = true;
         int noAppearance;
 
